@@ -15,7 +15,7 @@
         android:layout_height="100dp"
         android:src="@drawable/monica_plain"
         />
-    <LinearLayout
+    <RelativeLayout
         android:layout_marginLeft="15dp"
         android:layout_marginTop="40dp"
         android:layout_toRightOf="@id/image_monica"
@@ -23,16 +23,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:id="@+id/monica_text"
             android:text="Monica"
             android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/active_button"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/monica_text"
+            android:src="@drawable/active_bullet"/>
         <TextView
+            android:layout_toRightOf="@id/active_button"
+            android:layout_below="@id/monica_text"
             android:text="Active"
             android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <co.intentservice.chatui.ChatView
         chatview:backgroundColor="#f4f4f4"
