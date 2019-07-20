@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro1Activity"
+    android:background="#ffffff">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:id="@+id/logomandiri1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_normal" />
+    <ImageView
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/visual1"
+        android:layout_below="@id/logomandiri1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/visual3"/>
+    <TextView
+        android:fontFamily="@font/myriadpro_regular"
+        android:id="@+id/mandiri_online_text"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:layout_below="@id/visual1"
+        android:layout_width="match_parent"
+        android:text="Monica"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:fontFamily="@font/myriadpro_regular"
+        android:id="@+id/mandiri_online_text_2"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:layout_below="@id/mandiri_online_text"
+        android:layout_width="match_parent"
+        android:text="Personal assistant to manage your financial"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/progress1"
+        android:src="@drawable/progress3"
+        android:layout_below="@id/mandiri_online_text_2"
+        android:layout_width="match_parent"
+        android:layout_height="6dp" />
+    <ImageView
+        android:id="@+id/next_button3"
+        android:src="@drawable/login"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/progress1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
