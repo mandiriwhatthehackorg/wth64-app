@@ -6,17 +6,24 @@
     android:layout_height="match_parent"
     android:background="#F4F4F4"
     android:paddingBottom="0dp"
+    android:id="@+id/mainlayout"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logomandiri1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logo_normal" />
 
     <EditText
         android:id="@+id/find_atm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/logomandiri1"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="30dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_edittext"
         android:hint="Find Bank Mandiri ATM"
         android:padding="16dp" />
@@ -26,7 +33,7 @@
         android:layout_height="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="120dp"
         android:layout_marginRight="30dp"
         android:src="@drawable/search" />
 
@@ -36,9 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/find_atm"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="10dp">
 
         <ImageView
             android:layout_width="match_parent"
@@ -53,10 +60,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/scroll1"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
 
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="10dp">
 
         <ImageView
             android:layout_width="match_parent"
@@ -67,17 +74,17 @@
     </HorizontalScrollView>
 
 
-
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="-15dp"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/group1"/>
+        android:src="@drawable/group1" />
+
     <me.hammarstrom.fanmenu.FanMenu
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         app:menu_position="middle">
 
         <!--
@@ -93,28 +100,40 @@
         // The following views will act as menu items
         -->
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/search" />
+            android:layout_width="100dp"
+            android:scaleType="fitCenter"
+            android:layout_height="100dp"
+            android:background="#00000000"
+            android:src="@drawable/menuitem1" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/search" />
+            android:layout_width="100dp"
+            android:scaleType="fitCenter"
+            android:layout_height="100dp"
+            android:background="#00000000"
+            android:src="@drawable/menuitem2" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/search" />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/search" />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/search" />
+            android:id="@+id/monica_button"
+            android:layout_width="100dp"
+            android:scaleType="fitCenter"
+            android:layout_height="100dp"
+            android:background="#00000000"
+            android:src="@drawable/menuitem3" />
 
+        <ImageButton
+            android:layout_width="100dp"
+            android:scaleType="fitCenter"
+            android:layout_height="100dp"
+            android:background="#00000000"
+            android:src="@drawable/menuitem4" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:scaleType="fitCenter"
+            android:layout_height="100dp"
+            android:background="#00000000"
+            android:src="@drawable/menuitem5" />
 
     </me.hammarstrom.fanmenu.FanMenu>
 </RelativeLayout>
