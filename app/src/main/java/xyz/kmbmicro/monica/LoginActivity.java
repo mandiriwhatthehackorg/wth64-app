@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    static class HttpGetRequest extends AsyncTask<String, Void, String> {
+    class HttpGetRequest extends AsyncTask<String, Void, String> {
         public static final String REQUEST_METHOD = "GET";
         public static final int READ_TIMEOUT = 15000;
         public static final int CONNECTION_TIMEOUT = 15000;   @Override
@@ -75,6 +75,9 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPostExecute(String result){
                 super.onPostExecute(result);
             System.out.println(result);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+//
         }
     }
 }
