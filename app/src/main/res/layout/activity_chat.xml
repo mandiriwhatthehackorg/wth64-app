@@ -36,6 +36,8 @@
 
     <co.intentservice.chatui.ChatView
         chatview:backgroundColor="#f4f4f4"
+        chatview:sendBtnIconTint="@color/white"
+        chatview:sendBtnBackgroundTint="#003d79"
         chatview:inputHint="Start type here ..."
         chatview:messageTextColorSend="#ffffff"
         chatview:messageTextColorRcv="#ffffff"

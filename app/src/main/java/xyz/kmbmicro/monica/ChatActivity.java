@@ -22,7 +22,7 @@ import co.intentservice.chatui.models.ChatMessage;
 
 
 public class ChatActivity extends AppCompatActivity {
-    static ChatView chatView;
+    ChatView chatView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         chatView = (ChatView) findViewById(R.id.chat_view);
-
+        chatView.addMessage(new ChatMessage("Halo, dengan Monica, ada yang bisa dibantu?", System.currentTimeMillis(), ChatMessage.Type.RECEIVED));
         chatView.setOnSentMessageListener(new ChatView.OnSentMessageListener(){
             @Override
             public boolean sendMessage(ChatMessage chatMessage){
@@ -79,7 +79,7 @@ public class ChatActivity extends AppCompatActivity {
         return Integer.parseInt(token.nextToken());
     }
 
-    static class HttpGetRequest extends AsyncTask<String, Void, String> {
+    class HttpGetRequest extends AsyncTask<String, Void, String> {
         public static final String REQUEST_METHOD = "GET";
         public static final int READ_TIMEOUT = 15000;
         public static final int CONNECTION_TIMEOUT = 15000;   @Override
@@ -125,7 +125,8 @@ public class ChatActivity extends AppCompatActivity {
                 JSONObject cif = response.getJSONObject("cif");
                 String amount = cif.getString("codeAmount1");
                 System.out.println(amount);
-                chatView.addMessage(new ChatMessage("Amount = Rp. "+amount, System.currentTimeMillis(), ChatMessage.Type.RECEIVED));
+                chatView.addMessage(new ChatMessage("Saldo Anda saat ini sebesar Rp. "+amount, System.currentTimeMillis(), ChatMessage.Type.RECEIVED));
+                chatView.addMessage(new ChatMessage("Apakah ada pertanyaan lain?", System.currentTimeMillis(), ChatMessage.Type.RECEIVED));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
